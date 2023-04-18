@@ -1,4 +1,4 @@
-<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/icone.png" width="20px" align="left" alt="Imagem de Estrela">
+<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/icone.png" width="30px" align="left" margim-top="10" alt="Imagem de Estrela">
 <h1>Dota 2 Predictor</h1>
 
 #### 🔴 Definição de Problema
@@ -9,7 +9,9 @@ Olhando especificamente para trabalhos que lidam com os fatores que colaboram pa
 Unindo os dois temas apresentados anteriormente: a participação de times profissionais, e a predição da vitória dos times de jogos MOBA, este trabalho irá apresentar um modelo para realizar a predição da vitória, ou derrota, de partidas do jogo [Dota 2](https://www.dota2.com/home) em seu cenário competitivo. A escolha da predição de vitórias usando de dados de jogos competitivos se deu pelo fator de seus dados serem mais precisos, visto que ao extrair dados de partidas comuns na maioria dos casos algumas informações para a predição não estavam preenchidas.
 
 #### 🟠 Coleta dos Dados
-🚧 Em construção a coleta dos dados e local de armazenamento dos dados.
+Para a extração dos dados foi realizada uma pesquisa dos sistemas de API disponibilizados pela empresa gestora do jogo Dota 2, em que foi encontrado a API [OpenDota](https://www.opendota.com/), que disponibiliza a URL de requisição dos dados da API, de forma a facilitar o acesso na linguagem Python, usada para o desenvolvimento do projeto, bastando utilizar da biblioteca [requets](https://requests.readthedocs.io/en/latest/) que irá fazer o pedido das requisições, e a biblioteca [json](https://docs.python.org/pt-br/3/library/json.html) para que possamos manipular os dados e os transformar em arquivo CSV.
+
+É importante ressaltar que para a implantação do modelo foi desenvolvido no escopo do trabalho visa que novos dados possam ser inseridos a base de dados usada para a geração do modelo, dessa forma, sempre que pedido na interface desenvolvida novos dados são gerados, e inseridos no arquivo CSV gerado inicialmente, de forma a não constar duplicatas de partidas, visto que pode ocorrer a inserção de partidas listadas anteriormente caso não tenham sido realizadas novas partidas profissionais no intervalo de tempo entre as coletas dos dados.
 
 #### 🟡 Preparação dos Dados
 🚧 Em construção a escolha da preparação dos dados.
