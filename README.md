@@ -1,4 +1,4 @@
-<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/icone.png" width="30px" align="left" margim-top="10" alt="Imagem de Estrela">
+<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/icone.png" width="50px" align="left" alt="Imagem de Estrela">
 <h1>Dota 2 Predictor</h1>
 
 #### 🔴 Definição de Problema
@@ -11,7 +11,11 @@ Unindo os dois temas apresentados anteriormente: a participação de times profi
 #### 🟠 Coleta dos Dados
 Para a extração dos dados foi realizada uma pesquisa dos sistemas de API disponibilizados pela empresa gestora do jogo Dota 2, em que foi encontrado a API [OpenDota](https://www.opendota.com/), que disponibiliza a URL de requisição dos dados da API, de forma a facilitar o acesso na linguagem Python, usada para o desenvolvimento do projeto, bastando utilizar da biblioteca [requets](https://requests.readthedocs.io/en/latest/) que irá fazer o pedido das requisições, e a biblioteca [json](https://docs.python.org/pt-br/3/library/json.html) para que possamos manipular os dados e os transformar em arquivo CSV.
 
-É importante ressaltar que para a implantação do modelo foi desenvolvido no escopo do trabalho visa que novos dados possam ser inseridos a base de dados usada para a geração do modelo, dessa forma, sempre que pedido na interface desenvolvida novos dados são gerados, e inseridos no arquivo CSV gerado inicialmente, de forma a não constar duplicatas de partidas, visto que pode ocorrer a inserção de partidas listadas anteriormente caso não tenham sido realizadas novas partidas profissionais no intervalo de tempo entre as coletas dos dados.
+É importante ressaltar que para a implantação do modelo foi desenvolvido no escopo do trabalho visa que novos dados possam ser inseridos a base de dados usada para a geração do modelo, dessa forma, sempre que pedido na interface desenvolvida novos dados são gerados, e inseridos no arquivo CSV gerado inicialmente, de forma a não constar duplicatas de partidas, visto que pode ocorrer a inserção de partidas listadas anteriormente caso não tenham sido realizadas novas partidas profissionais no intervalo de tempo entre as coletas dos dados. Sobre os dados armazenados no CSV usado como base para a geração do modelo, o mesmo possui as seguintes colunas, e seguintes descrições:
+
+idMatch | teamWinner | pickRadiant1, pickDire1, .. | numTeamFights | barracksRadiant e barracksDire
+:------: | :------: | :------: | :------: | :------: |
+Inteiro que indica o número da partida extraída pela API | String que indica o valor que desejamos adivinhar na predição do modelo | Inteiro que indica o identificador do personagem selecionado por cada jogador retornado pela API | Número de batalhas ocorridas durante a partida com participação dos times de forma completa ou quase completa | Número de estruturas de barracas que não foram destruídas, sendo esse valor extraído como um valor de base 2 e convertido para binário | 
 
 #### 🟡 Preparação dos Dados
 🚧 Em construção a escolha da preparação dos dados.
