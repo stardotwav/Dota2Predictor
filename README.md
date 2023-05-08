@@ -27,4 +27,8 @@ Inteiro que indica o número da partida extraída pela API | String que indica o
 🚧 Em construção a forma de implantação do modelo.
 
 #### 🟣 Disponibilidade da Implantação do Modelo
-🚧 Em construção a implantação do modelo.
+Para a construção da implantação do modelo foi utilizado da criação de um web service, dessa forma necessitando de um desenvolvimento web, em que foi utilizado pra criação dos templates no **front-end** HTML e CSS, sem a necessidade de frameworks. Visando um melhor desenvolvimento da interface desenvolvida os modelos utilizados foram inicialmente modelados por meio da ferramenta **[Figma]()**, em que os modelos desenvolvidos podem ser acessados [aqui](https://www.figma.com/file/8m0BbtTDQEJImw8tZmLBG0/Design-Twitts-League-of-Legends?type=design&node-id=0%3A1&t=N5HS2oQEgtKDhGDi-1).
+
+E para o **back-end** visando usar da linguagem Python, usada no desenvolvimento do modelo, e pensando na atualização constante do modelo foi utilizado do framework **[Flask](https://flask.palletsprojects.com/en/2.3.x/)**.
+
+🚧 Em construção a implantação do modelo na AWS.
