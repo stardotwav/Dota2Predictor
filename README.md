@@ -33,7 +33,13 @@ Sobre os dados extraídos pela API eles possuem um fluxo de tratamento diferente
 <img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/preparacaoDadosAPI.png" alt="Diagrama de Apresentação do Processo de Tratamento dos Dados Enviados pela API">
 
 #### 🟢 Criação do Modelo
-🚧 Em construção a escolha e criação do modelo.
+Inicialmente foi pensado em qual modelo utilizar para a aplicação, em que foi gerado um gráfico de boxplot com a variação do cross validation de alguns algoritmos: Random Forest, Logistic Regression, SGDClassifier, Árvore de Decisão, SVC e MLPClassifier, sendo isso apresentado na imagem abaixo. A partir dessa imagem então, como pode ser observado os algoritmos Random Forest e Logistic Regression ficaram próximos, e sendo usado como objeto de decisão de escolha do algoritmo o fator de que o algoritmo random forest possuia uma maior média no boxplot.
+
+<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/graficoAlgoritmos.png" alt="Boxplot de Comparação entre Algoritmos de Classificação">
+
+A partir da escolha do algoritmo foram realizados diversos testes para verificar qual seria a melhor configuração do random forest a fim de se obter uma maior precisão. Dessa forma, como pode ser observado no arquivo de [análise do algoritmo](https://github.com/stardotwav/Dota2Predictor/blob/main/an%C3%A1lise%20de%20modelos/predicaoVitoriaPartidas.ipynb) foram gerados testes variando os critérios, entre gini e entropy, os número de estimatores, com valores 100, 150 e 200, e a altura máxima da árvore, com valores 10, 15 e 20. Todos os testes foram salvos em uma instância do MLFlow e podem ser acessados [aqui](https://dagshub.com/stardotwav/Dota2Predictor.mlflow). Após analisado cada um dos casos, e com auxílio do MLFlow foi possível determinar que o melhor caso do algoritmo do random forest foi utilizando do critério entropy, com 200 estimatores e uma altura máxima da árvore de 10, possuindo uma acurácia de cerca de 91%.
+
+Ao final, com as configurações feitas e todas as funções geradas, como apresentadas no arquivo de análise do algoritmo as mesmas foram inseridas em arquivos da linguagem Python, que foram incorporados ao back-end do sistema desenvolvido, visto que como foi desenvolvido no framework Flask, como será apresentado posteriormente a sua execução é similar a feita em arquivos do jupyter notebook.
 
 #### 🔵 Implantação do Modelo
 🚧 Em construção a forma de implantação do modelo.
