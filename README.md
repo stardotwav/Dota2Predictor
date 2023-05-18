@@ -42,11 +42,9 @@ A partir da escolha do algoritmo foram realizados diversos testes para verificar
 Ao final, com as configurações feitas e todas as funções geradas, como apresentadas no arquivo de análise do algoritmo as mesmas foram inseridas em arquivos da linguagem Python, que foram incorporados ao back-end do sistema desenvolvido, visto que como foi desenvolvido no framework Flask, como será apresentado posteriormente a sua execução é similar a feita em arquivos do jupyter notebook.
 
 #### 🔵 Implantação do Modelo
-🚧 Em construção a forma de implantação do modelo.
-
-#### 🟣 Disponibilidade da Implantação do Modelo
 Para a construção da implantação do modelo foi utilizado da criação de um web service, dessa forma necessitando de um desenvolvimento web, em que foi utilizado pra criação dos templates no **front-end** HTML e CSS, sem a necessidade de frameworks. Visando um melhor desenvolvimento da interface desenvolvida os modelos utilizados foram inicialmente modelados por meio da ferramenta **Figma** que os modelos desenvolvidos podem ser acessados [aqui](https://www.figma.com/file/8m0BbtTDQEJImw8tZmLBG0/Design-Twitts-League-of-Legends?type=design&node-id=0%3A1&t=N5HS2oQEgtKDhGDi-1).
 
-E para o **back-end** visando usar da linguagem Python, usada no desenvolvimento do modelo, e pensando na atualização constante do modelo foi utilizado do framework **[Flask](https://flask.palletsprojects.com/en/2.3.x/)**.
+E para o **back-end** visando usar da linguagem Python, usada no desenvolvimento do modelo, e pensando na atualização constante do modelo foi utilizado do framework **[Flask](https://flask.palletsprojects.com/en/2.3.x/)**. É importante ressaltar que existem apenas duas páginas no sistema, a principal onde é enviado os dados para análise e onde pode ser chamada a geração de novos dados, que por sua vez chama a segunda página apenas com uma mensagem de sucesso na geração de novos dados.
 
+#### 🟣 Disponibilidade da Implantação do Modelo
 🚧 Em construção a implantação do modelo na AWS.
