@@ -23,16 +23,14 @@ Para realizar o treinamento dos modelos não foi necessária nenhuma preparaçã
 Porém, deve-se ressaltar que ao receber dados de um usuário no *web service* desenvolvido, que será apresentado posteriormente, é realizada uma transformação e adição nos dados, de forma que o nome de cada personagem digitado é transformado em seu número identificador, salvo em um dicionário, e sua taxa de vitória de forma análoga é adicionado ao vetor de predição, que também foi salvo em um dicionário, para assim facilitar a inserção dos dados no vetor de predição.
 
 #### 🟢 Criação do Modelo
-Para a escolha do modelo foram selecionados previamente alguns algoritmos apresentados na literatura para a classificação de resultados em partidas de jogos MOBA. Os algoritmos selecionados foram Logistic Regression, Random Forest, Decision Tree, K-Nearest Neighbors (KNN) e Naive Bayes. A partir dos algoritmos selecionados e das bases de dados foi realizada uma aplicação do algoritmo *cross validation* em todos os algoritmos para medir a precisão dos mesmos em relação a cada uma das bases de dados com diferentes atributos. É importante ressaltar que a aplicação do algoritmo utilizou de 30 iterações, em que as bases de dados foram separadas em treino e teste no formato 80\% treino e 20\% teste. Além disso, durante a validação usando do *cross validation* para a escolha do melhor algoritmo foi utilizado apenas da base de treino.
-
-Na Tabela abaixo podemos verificar os resultados encontrados de precisão após a execução do *cross validation* para cada um dos algoritmos em cada uma das abordagens, em que os algoritmos estavam com as configuração padrão da biblioteca [sklearn](https://scikit-learn.org/stable/) para cada um deles, sendo os valores demarcados em negrito o algoritmo selecionado para cada uma das abordagens. 
+Para a escolha do modelo foram selecionados previamente alguns algoritmos apresentados na literatura para a classificação de resultados em partidas de jogos MOBA. Os algoritmos selecionados foram Logistic Regression, Random Forest, Decision Tree, K-Nearest Neighbors (KNN) e Naive Bayes. A partir dos algoritmos selecionados e das bases de dados foi realizada uma aplicação do algoritmo *cross validation* em todos os algoritmos para medir a precisão dos mesmos em relação a cada uma das bases de dados com diferentes atributos. É importante ressaltar que a aplicação do algoritmo utilizou de 30 iterações, em que as bases de dados foram separadas em treino e teste no formato 80\% treino e 20\% teste. Além disso, durante a validação usando da validaçãi cruzada em conjunto com o ajuste de parâmetros para a escolha do melhor algoritmo foi utilizado apenas da base de treino. Na Tabela abaixo é possível verificar os resultados obtidos de acurácia de cada modelo. 
 
 Abordagem  | Logistic Regression | Decision Tree | Ramdom Forest | KNN | Naive Bayes
 --------- | ------ | ------ | ------ | ------ | ------
-(1) Personagem Selecionado | 54\% | 55.6\% | **61.4\%** | 55.6\% | 53.5\%
-(2) Personagem Selecionado e Taxa de Vitória | 56\% | 63.1\% | **74.3\%** | 55.8\% | 54.3\%
-(3) Personagem Selecionado e Medalha da Pessoa Jogadora | 53.5\% | 57.7\% | **59.4\%** | 54.1\% | 49.7\%
-(4) Personagem Selecionado, Taxa de Vitória e Medalha da Pessoa Jogadora | 56.1\% | 61.5\% | **70.5\%** | 52.7\% | 52.8\%
+(1) Personagem Selecionado | 54.6\% | 57.8\% | **60.5\%** | 57.8\% | 53.8\%
+(2) Personagem Selecionado e Taxa de Vitória | 55.7\% | 62.5\% | **74.2\%** | 56.1\% | 54.9\%
+(3) Personagem Selecionado e Medalha da Pessoa Jogadora | 53.7\% | 58.5\% | **61.2\%** | 56.1\% | 51.3\%
+(4) Personagem Selecionado, Taxa de Vitória e Medalha da Pessoa Jogadora | 54.9\% | 63.5\% | **71.8\%** | 55.6\% | 52.8\%
 
 Ao final, com as configurações feitas e todas as funções geradas, como apresentadas no arquivo de análise do algoritmo as mesmas foram inseridas em arquivos da linguagem Python, que foram incorporados ao back-end do sistema desenvolvido, visto que como foi desenvolvido no framework Flask, como será apresentado posteriormente a sua execução é similar a feita em arquivos do jupyter notebook.
 
@@ -42,4 +40,8 @@ Para a construção da implantação do modelo foi utilizado da criação de um 
 E para o **back-end** visando usar da linguagem Python, usada no desenvolvimento do modelo, e pensando na atualização constante do modelo foi utilizado do framework **[Flask](https://flask.palletsprojects.com/en/2.3.x/)**. É importante ressaltar que existem apenas duas páginas no sistema, a principal onde é enviado os dados para análise e onde pode ser chamada a geração de novos dados, que por sua vez chama a segunda página apenas com uma mensagem de sucesso na geração de novos dados.
 
 #### 🟣 Disponibilidade da Implantação do Modelo
-🚧 Em construção a implantação do modelo na AWS.
+Os modelos com melhores resultados foram implantados em um *web service*, que está foi feito o deploy na plataforma da azure. O link está na descrição do repositório. Abaixo podem ser vistas imagens geradas da interface.
+
+<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/telawebservice.png" alt="Captura de Tela Principal do Web Service">
+
+<img src="https://github.com/stardotwav/Dota2Predictor/blob/main/img/atualizardadoswebservice.png" alt="Captura de Tela de Inserção de Novas Partidas na Base de Dados">
