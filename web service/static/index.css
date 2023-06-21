@@ -1,0 +1,189 @@
+body{
+    background-color: #191D41;
+    font-family: 'Mina', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+h1{
+    line-height: 1;
+}
+
+p{
+    font-size: 15px;
+}
+
+img{
+    float: left;
+    width: 20px;
+    margin-left: 15;
+}
+
+#linhaHorizontalInicio{
+    width: 90%;
+    height: 3px;
+    margin-left: -100;
+    border-radius: 0px 10px 10px 0px;
+    background: rgb(202,172,207);
+    background: linear-gradient(90deg, rgba(202,172,207,1) 0%, rgba(216,74,74,1) 25%, rgba(236,214,121,1) 50%, rgba(87,154,112,1) 75%, rgba(103,160,172,1) 100%);
+}
+
+#linhaHorizontalFinal{
+    width: 90%;
+    height: 3px;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 169;
+    margin-top: 15;
+    background: rgb(202,172,207);
+    background: linear-gradient(90deg, rgba(202,172,207,1) 0%, rgba(216,74,74,1) 25%, rgba(236,214,121,1) 50%, rgba(87,154,112,1) 75%, rgba(103,160,172,1) 100%);
+}
+
+#creditos{
+    text-align: right;
+}
+
+#site{
+    /* Definimos a largura da página */
+    width: 95%;
+    /* Aqui definiremos a posição que a página ocupará na tela, nesse caso estamos definindo que fique centralizado na tela*/
+    /*top : posição de cima */
+    margin-top: 60;
+    /* left: posição de esquerda*/
+    margin-left:auto;
+    /* bottom : posição de baixo */
+    margin-bottom:0;
+    /* right : posição de direita */
+    margin-right:auto;
+}
+
+#conteudo{
+    /*Novamente definimos a largura da div*/
+    width: 100%;
+    /* altura da div */
+    height: 80%;
+}
+
+#conteudo-left{
+    /*Novamente definimos a largura da div*/
+    width: 50%;
+    /* altura da div */
+    height: 80%;
+    /* O atributo Float é utilizado para fazermos o nosso bloco(div)
+    literalmente flutue e se posicione onde queremos na página,
+    quando escolhemos left, dizemos que esse bloco irá se posicionar na
+    parte esquerda da página */
+    float:left;
+}
+
+#conteudo-right{
+    /*Novamente definimos a largura da div*/
+    width: 50%;
+    /* altura da div */
+    height: 80%;
+    /* Pode parecer meio estranho usarmos o mesmo atributo left para o bloco
+    em que queremos posicionar na direita, mas como sabemos, o CSS é um estilo
+    em cascata, nossa div conteúdo definimos a largura de 1000px e na
+    conteudo-left 500px, automaticamente ao definirmos o conteudo-right
+    com 500px e à esquerda também, ele ficou à direita do conteudo-left,
+    pois o máximo que a div filha poderá ter é 1000px, sendo 500+500=1000px */
+    float:left;
+}
+
+#retangulo1{
+    width: 90%;
+    height: 285px;
+    border-color: #caaccf;
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 60;
+    display: inline-block;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#retangulo1 label{
+    margin-left: 15;
+}
+
+#retangulo2{
+    width: 90%;
+    height: 110px;
+    border-color: #67a0ac;
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 60;
+    display: inline-block;
+    margin-top: 15;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#retangulo2 p{
+    margin-left: 15;
+    line-height: 0.8;
+}
+
+#retangulo2 span{
+    font-size: 2em;
+}
+
+#radiantheroes,
+#direheroes,
+#radiantmedals,
+#diremedals{
+    width: 95%;
+    height: 20px;
+    margin-left: 15;
+    background-color: #191D41;
+    border-color: #caaccf;
+    border-width: 1px;
+    color: white;
+    font-family: 'Mina', sans-serif;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#submit{
+    width: 95%;
+    height: 25px;
+    margin-left: 15;
+    background-color: #caaccf;
+    border-width: 1px;
+    color: #191D41;
+    font-family: 'Mina', sans-serif;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#formsEsquerda{
+    /*Novamente definimos a largura da div*/
+    width: 50%;
+    /* altura da div */
+    height: 80%;
+    /* O atributo Float é utilizado para fazermos o nosso bloco(div)
+    literalmente flutue e se posicione onde queremos na página,
+    quando escolhemos left, dizemos que esse bloco irá se posicionar na
+    parte esquerda da página */
+    float:left;
+}
+
+#formsDireita{
+    /*Novamente definimos a largura da div*/
+    width: 50%;
+    /* altura da div */
+    height: 80%;
+    /* O atributo Float é utilizado para fazermos o nosso bloco(div)
+    literalmente flutue e se posicione onde queremos na página,
+    quando escolhemos left, dizemos que esse bloco irá se posicionar na
+    parte esquerda da página */
+    float:right;
+}
+
+a {
+    color: #67a0ac;
+    text-decoration: none;
+    margin-right: 10;
+    margin-top: -10;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #64FF56;
+}

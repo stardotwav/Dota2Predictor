@@ -1,0 +1,84 @@
+body{
+    background-color: #191D41;
+    font-family: 'Mina', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+h1{
+    line-height: 1.1;
+}
+
+img{
+    margin-bottom: -20;
+    width: 100px;
+    align-items: center;
+}
+
+#mensagem p{
+    margin-top: -20;
+}
+
+#site{
+    /* Definimos a largura da página */
+    width: 95%;
+    /* Aqui definiremos a posição que a página ocupará na tela, nesse caso estamos definindo que fique centralizado na tela*/
+    /*top : posição de cima */
+    margin-top: 60;
+    /* left: posição de esquerda*/
+    margin-left:auto;
+    /* bottom : posição de baixo */
+    margin-bottom:0;
+    /* right : posição de direita */
+    margin-right:auto;
+}
+
+#linhaHorizontalInicio{
+    width: 90%;
+    height: 3px;
+    margin-left: -100;
+    border-radius: 0px 10px 10px 0px;
+    background: rgb(202,172,207);
+    background: linear-gradient(90deg, rgba(202,172,207,1) 0%, rgba(216,74,74,1) 25%, rgba(236,214,121,1) 50%, rgba(87,154,112,1) 75%, rgba(103,160,172,1) 100%);
+}
+
+#linhaHorizontalFinal{
+    width: 90%;
+    height: 3px;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 169;
+    margin-top: 15;
+    background: rgb(202,172,207);
+    background: linear-gradient(90deg, rgba(202,172,207,1) 0%, rgba(216,74,74,1) 25%, rgba(236,214,121,1) 50%, rgba(87,154,112,1) 75%, rgba(103,160,172,1) 100%);
+}
+
+#mensagem{
+    /*Novamente definimos a largura da div*/
+    width: 100%;
+    /* altura da div */
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+#items{
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+
+#mensagem a{
+    color: #caaccf;
+    text-decoration: none;
+}
+
+#mensagem a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#creditos{
+    text-align: right;
+}

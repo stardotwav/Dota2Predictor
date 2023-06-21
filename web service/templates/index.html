@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <!-- inserindo o arquivo css -->
+        <link type="text/css" rel="stylesheet" media="screen" href="../static/index.css"/>
+
+        <!-- inserindo informações de fontes do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="site">
+            <div id="linhaHorizontalInicio"></div>
+
+            <div id="conteudo"> <!-- conteudo -->
+                <div id="conteudo-left"> <!-- esquerda -->
+                    <br>
+
+                    <img style="width: 70px; margin-top: 15; margin-left: -10; margin-right: 10;" src="{{url_for('static', filename='img/icone.png')}}">
+                    <h1 style="margin-top: 20;">Olá! Bem-Vinde ao</h1>
+                    <h1 style="color: #ecd679; margin-top: -20; margin-bottom: 30px;">Dota 2 Predictor</h1>
+
+                    <p>Essa plataforma foi desenvolvida para apresentar a chance de vitória de um time em partidas 
+                        de Dota 2 utilizando de poucos atributos: os personagens selecionados por cada jogador de 
+                        cada time, ou além disso, caso esteja disponível a medalha de cada jogador, sendo 0 Arauto, 2 Arauto com 2 estrelas, 
+                        e assim por diante.</p> 
+
+                    <p>Os dados foram treinados com partidas profissionais e usam como atributo extra a taxa de 
+                        vitória dos personagens selecionados, sendo essa informação adicionada pela própria 
+                        plataforma na hora da predição.</p>
+
+                    <p style="margin-top: 40px;">
+                        Precisão do Modelo sem Medalha: <span style="color: #FC7DEF;">{{precisaotaxavitoria}}%</span>
+                        <br>
+                        Precisão do Modelo com Medalha: <span style="color: #079FC3;">{{precisaomedalha}}%</span>
+                        <br>
+                        Número de Partidas na Base de Dados: <span style="color: #CAACCF;">{{partidas}}</span>
+                        <br>
+                        <a href="/atualizarDados">Inserir Novas Partidas!</a>
+                    </p>
+                </div> <!-- esquerda -->
+
+                <div id="conteudo-right"> <!-- direita -->
+                    <br>
+                    <br>
+
+                    <div id="retangulo1"> <!-- retangulo 1-->
+                        <p></p>
+
+                        <form method="POST">
+                            <img src="{{url_for('static', filename='img/icone1.png')}}">
+                            <label for="radiantheroes">personagens time radiant</label>
+                            <input style="margin-top: 5; margin-bottom: 5;" type="text" id="radiantheroes" name="radiantheroes">
+
+                            <img src="{{url_for('static', filename='img/icone2.png')}}">
+                            <label for="direheroes">personagens time dire</label>
+                            <input style="margin-top: 5; margin-bottom: 5;" type="text" id="direheroes" name="direheroes">
+
+                            <img src="{{url_for('static', filename='img/icone1.png')}}">
+                            <label for="radiantheroes">medalhas time radiant</label>
+                            <input style="margin-top: 5; margin-bottom: 5;" type="text" id="radiantmedals" name="radiantmedals">
+
+                            <img src="{{url_for('static', filename='img/icone2.png')}}">
+                            <label for="direheroes">medalhas time dire</label>
+                            <input style="margin-top: 5; margin-bottom: 5;" type="text" id="radiantmedals" name="diremedals">
+
+                            <input style="margin-top: 10;" type="submit" value="Send" id="submit"/>
+                            <br>
+                        </form>
+                    </div> <!-- retangulo 1-->
+
+                    <br>
+                    
+                    <div id="retangulo2"> <!-- retangulo 2-->
+                        <img style="width: 80px; margin-top: 15; margin-right: 20;" src="{{url_for('static', filename='img/icone6.png')}}">
+                        <p style="margin-top: 20;"><span style="color: #ecd679;">{{chance}}%</span> de chance do time</p>
+                        <p><span style="color: {{color}};">{{team}}</span> vencer!</p>
+                    </div> <!-- retangulo 2-->
+                </div> <!-- direita -->
+
+            </div> <!-- conteudo -->
+
+            <div id="linhaHorizontalFinal"></div>
+            <p id="creditos">Made with ♡ by Estela</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <!-- inserindo o arquivo css -->
+        <link type="text/css" rel="stylesheet" media="screen" href="../static/atualizarDados.css"/>
+
+        <!-- inserindo informações de fontes do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="site">
+            <div id="linhaHorizontalInicio"></div>
+
+            <div id="mensagem">
+                <div id="items">
+                    <br>
+                    <br>
+                    <br>
+                    <img src="{{url_for('static', filename='img/icone4.png')}}">
+                    <h1 style="font-size: 3em;">dados atualizados</h1>
+                    <h1 style="font-size: 3em; color: #FC7DEF; margin-top: -50">com sucesso!</h1>
+                    <p>as informações serão atualizadas na página inicial</p>
+                    <p><a href="/">Home</a></p>
+                </div>
+            </div>
+
+            <div id="linhaHorizontalFinal"></div>
+            <p id="creditos">Made with ♡ by Estela</p>
+        </div>
+    </body>
+</html>
